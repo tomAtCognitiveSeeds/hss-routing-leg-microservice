@@ -13,7 +13,7 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name="routingleg")
+@Table(name="routing_leg")
 public class RoutingLeg 
 {
 	/*
