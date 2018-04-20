@@ -33,9 +33,9 @@ public class RoutingLegService
 	}
 	
 	// Retrieves one row from table based on given id
-	public List<RoutingLeg> getRoutingLegByServiceType(Long servie_type) 
+	public List<RoutingLeg> getRoutingLegByServiceTypeId(Long servie_type_id) 
 	{
-		return routingLegRepository.findRoutingLegByServiceType(servie_type);
+		return routingLegRepository.findRoutingLegByServiceTypeId(servie_type_id);
 	}
 	
 	// Inserts row into table 

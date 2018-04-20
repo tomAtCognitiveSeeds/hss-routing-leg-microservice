@@ -23,41 +23,41 @@ public class RoutingLegController
 	private RoutingLegService routinglegService;
 	
 	// ------------ Retrieve all routing legs  ------------
-	@RequestMapping(value = "/routingleg", method = RequestMethod.GET)
+	@RequestMapping(value = "/routing_leg", method = RequestMethod.GET)
 	public List<RoutingLeg> getAllRoutingLegs() 
 	{	
 		return routinglegService.getAllRoutingLegs();
 	}
 	
 	// ------------ Retrieve a routing leg  ------------
-	@RequestMapping(value = "/routingleg/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/routing_leg/{id}", method = RequestMethod.GET)
 	public Optional<RoutingLeg> getRoutingLegById(@PathVariable Long id) 
 	{
 		return routinglegService.getRoutingLegById(id);
 	}
 	
 	// ------------ Retrieve a routing leg  ------------
-	@RequestMapping(value = "/routingleg/idServiceType/{service_type}", method = RequestMethod.GET)
-	public List<RoutingLeg> getRoutingLegByServiceType(@PathVariable Long service_type) 
+	@RequestMapping(value = "/routing_leg/id_service_type/{service_type_id}", method = RequestMethod.GET)
+	public List<RoutingLeg> getRoutingLegByServiceTypeId(@PathVariable Long service_type_id) 
 	{
-		return routinglegService.getRoutingLegByServiceType(service_type);
+		return routinglegService.getRoutingLegByServiceTypeId(service_type_id);
 	}
 	
 	// ------------ Create a routing leg ------------
-	@RequestMapping(value = "/routingleg", method = RequestMethod.POST)
+	@RequestMapping(value = "/routing_leg", method = RequestMethod.POST)
 	public void addRoutingLeg(@RequestBody RoutingLeg routingleg) {
 		routinglegService.addRoutingLeg(routingleg);
 		
 	}
 	
 	// ------------ Update a routing leg  ------------
-	@RequestMapping(value = "/routingleg/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/routing_leg/{id}", method = RequestMethod.PUT)
 	public void updateRoutingLeg(@RequestBody RoutingLeg routingleg,@PathVariable Long id) {
 		routinglegService.updateRoutingLeg(id, routingleg);
 	}
 	
 	// ------------ Delete a routing leg  ------------
-	@RequestMapping(value = "/routingleg/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/routing_leg/{id}", method = RequestMethod.DELETE)
 	public void deleteRoutingLeg(@PathVariable Long id) {
 		routinglegService.deleteRoutingLeg(id);
 	}

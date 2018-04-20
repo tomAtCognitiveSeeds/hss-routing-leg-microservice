@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.phss</groupId>
-	<artifactId>routing_leg</artifactId>
+	<artifactId>routing-leg</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>routing_leg</name>
+	<name>routing-leg</name>
 	<description>Microservice for retrieving and getting a routing leg</description>
 
 	<parent>
@@ -49,6 +49,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- Use Actuator for Metrics and Health Checks -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>	
 	</dependencies>
 
 	<build>

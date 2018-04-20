@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+
+  build:
+    commands:
+      - echo building the source...
+      - mvn clean package
+      - mvn install
+            
+artifacts:
+  files:
+    - 'Dockerfile'
+    - 'target/routing-leg-0.0.1-SNAPSHOT.jar'
+    - 'routingLegImage.json'

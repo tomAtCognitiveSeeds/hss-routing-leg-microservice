@@ -1,0 +1,6 @@
+[
+    {
+        "name": "hss-routing-leg-container-fg",
+        "imageUri": "057962725861.dkr.ecr.us-east-1.amazonaws.com/worldpak/hss/routing-leg:latest"
+    }
+]
